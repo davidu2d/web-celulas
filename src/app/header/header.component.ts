@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  @Input() sidenav!: MatSidenav
+
   public openSideNav(){
-    
+    this.sidenav.toggle();
   }
 }

@@ -3,11 +3,22 @@
     <mat-sidenav-container class="sidenav-container">
         <mat-sidenav #sidenav class="w-10p">
             <mat-list >
-                <mat-list-item class="align-items-menu" (click)="sidenav.toggle()">
+                <mat-list-item (click)="sidenav.toggle()">
                     <div class="align-items-menu">
                         <mat-icon>home</mat-icon>
                         <span class="ml-15">
-                            <a href="/">Home</a>
+                            <a routerLink="/">Home</a>
+                        </span>
+                    </div>
+                </mat-list-item>
+
+                <mat-divider></mat-divider>
+
+                <mat-list-item (click)="sidenav.toggle()">
+                    <div class="align-items-menu">
+                        <mat-icon>list</mat-icon>
+                        <span class="ml-15">
+                            <a routerLink="/categoria">Categoria</a>
                         </span>
                     </div>
                 </mat-list-item>
